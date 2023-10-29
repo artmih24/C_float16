@@ -2,6 +2,7 @@
 
 #include <stdint.h>
 #include <stdarg.h>
+#include <math.h>
 
 /// <summary>
 /// prints half precision floating point number variable name and value
@@ -132,6 +133,74 @@ float16 va_add(const char* vargsstr, ...);
 /// <param name="...">multipliers as half precision floating point numbers</param>
 /// <returns>product of half precision floating point numbers</returns>
 float16 va_mul(const char* vargsstr, ...);
+
+float16 Fabs(float16 x);
+
+float16 Abs(float16 x);
+
+float16 Fmod(float16 a, float16 b);
+
+float16 Round(float16 x);
+
+float16 Ceil(float16 x);
+
+float16 Floor(float16 x);
+
+float16 Trunc(float16 x);
+
+float16 Nearbyint(float16 x);
+
+float16 Rint(float16 x);
+
+float16 Pow(float16 a, float16 b);
+
+float16 Sqrt(float16 x);
+
+float16 Cbrt(float16 x);
+
+float16 Exp(float16 x);
+
+float16 Exp2(float16 x);
+
+float16 Expm1(float16 x);
+
+float16 Log(float16 x);
+
+float16 Log10(float16 x);
+
+float16 Log1p(float16 x);
+
+float16 Log2(float16 x);
+
+float16 Logb(float16 x);
+
+float16 Sin(float16 x);
+
+float16 Cos(float16 x);
+
+float16 Tan(float16 x);
+
+float16 Sinh(float16 x);
+
+float16 Cosh(float16 x);
+
+float16 Tanh(float16 x);
+
+float16 Asin(float16 x);
+
+float16 Acos(float16 x);
+
+float16 Atan(float16 x);
+
+float16 Atan2(float16 a, float16 b);
+
+float16 Asinh(float16 x);
+
+float16 Acosh(float16 x);
+
+float16 Atanh(float16 x);
+
+float16 Hypot(float16 a, float16 b);
 
 /// <summary>
 /// Comparison of two half precision floating point numbers, returns 1 if they are equal

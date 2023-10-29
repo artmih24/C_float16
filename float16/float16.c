@@ -102,6 +102,142 @@ float16 va_mul(const char* vargsstr, ...) {
     return result;
 }
 
+float16 Fabs(float16 x) {
+    return ToFloat16(fabsf(ToFloat32(x)));
+}
+
+float16 Abs(float16 x) {
+    return ToFloat16(fabsf(ToFloat32(x)));
+}
+
+float16 Fmod(float16 a, float16 b) {
+    return ToFloat16(fmodf(ToFloat32(a), ToFloat32(b)));
+}
+
+float16 Round(float16 x) {
+    return ToFloat16(roundf(ToFloat32(x)));
+}
+
+float16 Ceil(float16 x) {
+    return ToFloat16(ceilf(ToFloat32(x)));
+}
+
+float16 Floor(float16 x) {
+    return ToFloat16(floorf(ToFloat32(x)));
+}
+
+float16 Trunc(float16 x) {
+    return ToFloat16(truncf(ToFloat32(x)));
+}
+
+float16 Nearbyint(float16 x) {
+    return ToFloat16(nearbyintf(ToFloat32(x)));
+}
+
+float16 Rint(float16 x) {
+    return ToFloat16(rintf(ToFloat32(x)));
+}
+
+float16 Pow(float16 a, float16 b) {
+    return ToFloat16(powf(ToFloat32(a), ToFloat32(b)));
+}
+
+float16 Sqrt(float16 x) {
+    return ToFloat16(sqrtf(ToFloat32(x)));
+}
+
+float16 Cbrt(float16 x) {
+    return ToFloat16(cbrtf(ToFloat32(x)));
+}
+
+float16 Exp(float16 x) {
+    return ToFloat16(expf(ToFloat32(x)));
+}
+
+float16 Exp2(float16 x) {
+    return ToFloat16(exp2f(ToFloat32(x)));
+}
+
+float16 Expm1(float16 x) {
+    return ToFloat16(expm1f(ToFloat32(x)));
+}
+
+float16 Log(float16 x) {
+    return ToFloat16(logf(ToFloat32(x)));
+}
+
+float16 Log10(float16 x) {
+    return ToFloat16(log10f(ToFloat32(x)));
+}
+
+float16 Log1p(float16 x) {
+    return ToFloat16(log1pf(ToFloat32(x)));
+}
+
+float16 Log2(float16 x) {
+    return ToFloat16(log2f(ToFloat32(x)));
+}
+
+float16 Logb(float16 x) {
+    return ToFloat16(logbf(ToFloat32(x)));
+}
+
+float16 Sin(float16 x) {
+    return ToFloat16(sinf(ToFloat32(x)));
+}
+
+float16 Cos(float16 x) {
+    return ToFloat16(cosf(ToFloat32(x)));
+}
+
+float16 Tan(float16 x) {
+    return ToFloat16(tanf(ToFloat32(x)));
+}
+
+float16 Sinh(float16 x) {
+    return ToFloat16(sinhf(ToFloat32(x)));
+}
+
+float16 Cosh(float16 x) {
+    return ToFloat16(coshf(ToFloat32(x)));
+}
+
+float16 Tanh(float16 x) {
+    return ToFloat16(tanhf(ToFloat32(x)));
+}
+
+float16 Asin(float16 x) {
+    return ToFloat16(asinf(ToFloat32(x)));
+}
+
+float16 Acos(float16 x) {
+    return ToFloat16(acosf(ToFloat32(x)));
+}
+
+float16 Atan(float16 x) {
+    return ToFloat16(atanf(ToFloat32(x)));
+}
+
+float16 Atan2(float16 a, float16 b) {
+    return ToFloat16(atan2f(ToFloat32(a), ToFloat32(b)));
+}
+
+float16 Asinh(float16 x) {
+    return ToFloat16(asinhf(ToFloat32(x)));
+}
+
+float16 Acosh(float16 x) {
+    return ToFloat16(acoshf(ToFloat32(x)));
+}
+
+float16 Atanh(float16 x) {
+    return ToFloat16(atanhf(ToFloat32(x)));
+}
+
+float16 Hypot(float16 a, float16 b) {
+    return ToFloat16(hypotf(ToFloat32(a), ToFloat32(b)));
+}
+
 int Cmp_eq(float16 a, float16 b) {
     return (a == b);
 }
