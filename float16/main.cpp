@@ -34,19 +34,19 @@ int main() {
 
 	printvar_float16(a);
 	printvar_float16(b);
-	printf("a + b = %f\n", ToFloat32(c));
-	printf("a - b = %f\n", ToFloat32(d));
-	printf("a * b = %f\n", ToFloat32(e));
-	printf("a / b = %f\n", ToFloat32(f));
-	printf("a + 1 = %f\n", ToFloat32(g));
-	printf("a - 1 = %f\n", ToFloat32(h));
-	printf("1 / b = %f\n", ToFloat32(i));
-	printf("-a    = %f\n", ToFloat32(j));
+	printf("c = a + b = %f\n", ToFloat32(c));
+	printf("d = a - b = %f\n", ToFloat32(d));
+	printf("e = a * b = %f\n", ToFloat32(e));
+	printf("f = a / b = %f\n", ToFloat32(f));
+	printf("g = a + 1 = %f\n", ToFloat32(g));
+	printf("h = a - 1 = %f\n", ToFloat32(h));
+	printf("i = 1 / b = %f\n", ToFloat32(i));
+	printf("j = -a    = %f\n", ToFloat32(j));
 
 	printf("\n");
 
-	printf("a + b + d + f = %f\n", ToFloat32(k));
-	printf("a * d * f * i = %f\n", ToFloat32(l));
+	printf("k = a + b + d + f = %f\n", ToFloat32(k));
+	printf("l = a * d * f * i = %f\n", ToFloat32(l));
 
 	printf("\n");
 
