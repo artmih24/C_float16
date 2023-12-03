@@ -86,21 +86,23 @@ float16 Inv(float16 x) {
     return Div(0x3C00, x);
 }
 
-float16 va_add(const char* vargsstr, ...) {
-    va_list vargs;
-    va_start(vargs, vargsstr);
-    float16 result = va_arg(vargs, float16);
-    for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Add(result, va_arg(vargs, float16)) : *vargsstr++) {}
-    return result;
-}
+#ifndef __GNUC__
+    float16 va_add(const char* vargsstr, ...) {
+        va_list vargs;
+        va_start(vargs, vargsstr);
+        float16 result = va_arg(vargs, float16);
+        for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Add(result, va_arg(vargs, float16)) : *vargsstr++) {}
+        return result;
+    }
 
-float16 va_mul(const char* vargsstr, ...) {
-    va_list vargs;
-    va_start(vargs, vargsstr);
-    float16 result = va_arg(vargs, float16);
-    for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Mul(result, va_arg(vargs, float16)) : *vargsstr++) {}
-    return result;
-}
+    float16 va_mul(const char* vargsstr, ...) {
+        va_list vargs;
+        va_start(vargs, vargsstr);
+        float16 result = va_arg(vargs, float16);
+        for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Mul(result, va_arg(vargs, float16)) : *vargsstr++) {}
+        return result;
+    }
+#endif
 
 float16 Fabs(float16 x) {
     return ToFloat16(fabsf(ToFloat32(x)));

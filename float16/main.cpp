@@ -28,9 +28,11 @@ int main() {
 			g = Inc(a),
 			h = Dec(a),
 			i = Inv(b),
-			j = Neg(a),
-			k = VA_Add(a, b, d, f),
-			l = VA_Mul(a, d, f, i);
+			j = Neg(a);
+	#ifndef __GNUC__
+		float16 k = VA_Add(a, b, d, f),
+			    l = VA_Mul(a, d, f, i);
+	#endif
 
 	printvar_float16(a);
 	printvar_float16(b);
@@ -45,10 +47,12 @@ int main() {
 
 	printf("\n");
 
-	printf("a + b + d + f = %f\n", ToFloat32(k));
-	printf("a * d * f * i = %f\n", ToFloat32(l));
+	#ifndef __GNUC__
+		printf("a + b + d + f = %f\n", ToFloat32(k));
+		printf("a * d * f * i = %f\n", ToFloat32(l));
 
-	printf("\n");
+		printf("\n");
+	#endif
 
 	// comparisons
 	bool b1 = Cmp_eq(a, b),
