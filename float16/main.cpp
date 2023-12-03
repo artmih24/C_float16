@@ -28,11 +28,9 @@ int main() {
 			g = Inc(a),
 			h = Dec(a),
 			i = Inv(b),
-			j = Neg(a);
-	#if defined(_MSC_VER)
-		float16 k = VA_Add(a, b, d, f),
-			    l = VA_Mul(a, d, f, i);
-	#endif
+			j = Neg(a),
+			k = VA_Add(a, b, d, f),
+			l = VA_Mul(a, d, f, i);
 
 	printvar_float16(a);
 	printvar_float16(b);
@@ -47,12 +45,10 @@ int main() {
 
 	printf("\n");
 
-	#if defined(_MSC_VER)
-		printf("a + b + d + f = %f\n", ToFloat32(k));
-		printf("a * d * f * i = %f\n", ToFloat32(l));
+	printf("a + b + d + f = %f\n", ToFloat32(k));
+	printf("a * d * f * i = %f\n", ToFloat32(l));
 
-		printf("\n");
-	#endif
+	printf("\n");
 
 	// comparisons
 	bool b1 = Cmp_eq(a, b),

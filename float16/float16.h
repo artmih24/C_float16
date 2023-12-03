@@ -8,9 +8,9 @@
 /// prints half precision floating point number variable name and value
 /// </summary>
 /// <param name="f">half precision floating point number to be printed</param>
-#ifdef __GNUC__
+#if defined(__GNUC__)
     #define printvar_float16(var) printf("%s = %f\n", #var, ToFloat32(var))
-#else
+#elif defined(_MSC_VER)
     #define printvar_float16(var) printf(#var ## " = %f\n", ToFloat32(var))
 #endif
 
@@ -258,21 +258,19 @@ int Cmp_le(float16 a, float16 b);
     }
 #endif
 
-#if defined(_MSC_VER)
-    /// <summary>
-    /// Sum of any quantity of half precision floating point numbers
-    /// </summary>
-    /// <param name="...">summands as half precision floating point numbers</param>
-    /// <returns>sum of half precision floating point numbers</returns>
-    #define VA_Add(...) va_add(#__VA_ARGS__, __VA_ARGS__)
+/// <summary>
+/// Sum of any quantity of half precision floating point numbers
+/// </summary>
+/// <param name="...">summands as half precision floating point numbers</param>
+/// <returns>sum of half precision floating point numbers</returns>
+#define VA_Add(...) va_add(#__VA_ARGS__, __VA_ARGS__)
 
-    /// <summary>
-    /// Product of any quantity of half precision floating point numbers
-    /// </summary>
-    /// <param name="...">multipliers as half precision floating point numbers</param>
-    /// <returns>product of half precision floating point numbers</returns>
-    #define VA_Mul(...) va_mul(#__VA_ARGS__, __VA_ARGS__)
-#endif
+/// <summary>
+/// Product of any quantity of half precision floating point numbers
+/// </summary>
+/// <param name="...">multipliers as half precision floating point numbers</param>
+/// <returns>product of half precision floating point numbers</returns>
+#define VA_Mul(...) va_mul(#__VA_ARGS__, __VA_ARGS__)
 
 // some half precision floating point constants
 
