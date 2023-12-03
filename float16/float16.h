@@ -138,8 +138,18 @@ float16 va_add(const char* vargsstr, ...);
 /// <returns>product of half precision floating point numbers</returns>
 float16 va_mul(const char* vargsstr, ...);
 
+/// <summary>
+/// Absolute value of half precision floating point number
+/// </summary>
+/// <param name="x">half precision floating point number to get its absolute value</param>
+/// <returns>absolute value of half precision floating point number</returns>
 float16 Fabs(float16 x);
 
+/// <summary>
+/// Absolute value of half precision floating point number
+/// </summary>
+/// <param name="x">half precision floating point number to get its absolute value</param>
+/// <returns>absolute value of half precision floating point number</returns>
 float16 Abs(float16 x);
 
 float16 Fmod(float16 a, float16 b);

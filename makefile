@@ -20,10 +20,10 @@ all: main.o float16.o
 	g++ main.o float16.o -o $(EXE)
 
 main.o:
-	g++ $(CFLAGS) float16/main.cpp
+	g++ -std=c++23 $(CFLAGS) float16/main.cpp
 
 float16.o:
-	gcc $(CFLAGS) float16/float16.c
+	gcc -std=c99 $(CFLAGS) float16/float16.c
 
 clean:
 	$(RM) *.o $(EXE)

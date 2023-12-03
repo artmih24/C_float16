@@ -107,7 +107,7 @@ float16 Inv(float16 x) {
         va_list vargs;
         va_start(vargs, vargsstr);
         float16 result = (float16)(va_arg(vargs, int));
-        for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Add(result, (float16)va_arg(vargs, int)) : *vargsstr++) {}
+        for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Add(result, (float16)(va_arg(vargs, int))) : *vargsstr++) {}
         return result;
     }
 
@@ -115,7 +115,7 @@ float16 Inv(float16 x) {
         va_list vargs;
         va_start(vargs, vargsstr);
         float16 result = (float16)(va_arg(vargs, int));
-        for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Mul(result, (float16)va_arg(vargs, int)) : *vargsstr++) {}
+        for (int i = 0; vargsstr[i]; vargsstr[++i] == ',' ? result = Mul(result, (float16)(va_arg(vargs, int))) : *vargsstr++) {}
         return result;
     }
 #endif
