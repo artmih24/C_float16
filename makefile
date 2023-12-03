@@ -14,14 +14,16 @@ CP = cp -f
 EXE = a.out
 endif
 
+CFLAGS = -c -Wall
+
 all: main.o float16.o
 	g++ main.o float16.o -o $(EXE)
 
 main.o:
-	g++ -c float16/main.cpp
+	g++ $(CFLAGS) float16/main.cpp
 
 float16.o:
-	gcc -c float16/float16.c
+	gcc $(CFLAGS) float16/float16.c
 
 clean:
 	$(RM) *.o $(EXE)
