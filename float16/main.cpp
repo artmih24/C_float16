@@ -29,7 +29,7 @@ int main() {
 			h = Dec(a),
 			i = Inv(b),
 			j = Neg(a);
-	#ifndef __GNUC__
+	#if defined(_MSC_VER)
 		float16 k = VA_Add(a, b, d, f),
 			    l = VA_Mul(a, d, f, i);
 	#endif
@@ -47,7 +47,7 @@ int main() {
 
 	printf("\n");
 
-	#ifndef __GNUC__
+	#if defined(_MSC_VER)
 		printf("a + b + d + f = %f\n", ToFloat32(k));
 		printf("a * d * f * i = %f\n", ToFloat32(l));
 

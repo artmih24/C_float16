@@ -86,7 +86,7 @@ float16 Inv(float16 x) {
     return Div(0x3C00, x);
 }
 
-#ifndef __GNUC__
+#if defined(_MSC_VER)
     float16 va_add(const char* vargsstr, ...) {
         va_list vargs;
         va_start(vargs, vargsstr);

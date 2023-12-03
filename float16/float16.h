@@ -258,7 +258,7 @@ int Cmp_le(float16 a, float16 b);
     }
 #endif
 
-#ifndef __GNUC__
+#if defined(_MSC_VER)
     /// <summary>
     /// Sum of any quantity of half precision floating point numbers
     /// </summary>
