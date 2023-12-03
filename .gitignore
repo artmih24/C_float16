@@ -366,3 +366,5 @@ FodyWeavers.xsd
 a.exe
 a.out
 **/.vscode/*
+**/CMakeFiles/*
+**/build/*
